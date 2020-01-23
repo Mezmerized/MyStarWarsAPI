@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My SWApi</title>
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.css">
+</head>
+<body>
+
+<!----------     Header  -------------->
+<div class="header-footer text-center">
+    <h1>Frontend-Test // ASSECOR </h1>
+    <p>Maximilian Starke</p> 
+</div>
+
+<!----------     Cards Container   -------------->
+
+<div class="container text-center">
+    <div class="row">
+
+<!------------     Cards row I     ------------------>
+
+<!----------     Card Star Wars Films   -------------->
+
+        <div class="col-sm-6">
+            <div class="card">
+                <h4 class="card-header">Star Wars Films</h4>
+                <div class="card-body ">                    
+                    <p class="card-text mb-1">
+                        <strong>Title</strong>
+                    </p>
+                    <p class="card-text" id="film_title">
+                        Loading...
+                    </p>
+                    <hr>
+                    <p class="card-text mb-1">
+                        <strong>Director</strong> 
+                    </p>
+                    <p class="card-text" id="film_director">
+                        Loading...
+                    </p>
+                    <hr>
+                    <p class="card-text mb-1">
+                        <strong>Release Date</strong>
+                    </p>
+                    <p class="card-text" id="film_release_date">
+                        Loading...
+                    </p>
+                </div>
+            </div>
+            <br>
+            <input type="button" value="Another Film" class="my-btn" id="getfilm">
+        </div>
+        
+<!----------     Card Star Wars Characters   -------------->
+
+        <div class="col-sm-6">
+            <div class="card">
+                <h4 class="card-header">Star Wars Characters</h4>
+                <div class="card-body">                    
+                    <p class="card-text mb-1">
+                        <strong>Name</strong>
+                    </p>
+                    <p class="card-text" id="person_name">
+                        Loading...
+                    </p>
+                    <hr>
+                    <p class="card-text mb-1">
+                        <strong>Birth Year</strong> 
+                    </p>
+                    <p class="card-text" id="person_birth_year">
+                        Loading...
+                    </p>
+                    <hr>
+                    <p class="card-text mb-1">
+                        <strong>Height</strong>
+                    </p>
+                    <p class="card-text" id="person_height">
+                        Loading...
+                    </p>
+                </div>
+            </div>
+            <br>                
+            <input type="button" value="Another Person" class="my-btn" id="getperson">
+        </div>
+     </div>
+
+    <div class="row">
+
+<!----------     Cards row II -------------->
+
+<!----------     Card Star Wars Planets   -------------->
+
+        <div class="col-sm-6">
+            <div class="card">
+                <h4 class="card-header">Star Wars Planets</h4>
+                <div class="card-body">                    
+                    <p class="card-text mb-1">
+                        <strong>Name</strong>
+                    </p>
+                    <p class="card-text" id="planet_name">
+                        Loading...
+                    </p>
+                    <hr>
+                    <p class="card-text mb-1">
+                        <strong>Population</strong> 
+                    </p>
+                    <p class="card-text" id="planet_population">
+                        Loading...
+                    </p>
+                    <hr>
+                    <p class="card-text mb-1">
+                        <strong>Climate</strong>
+                    </p>
+                    <p class="card-text" id="planet_climate">
+                        Loading...
+                    </p>
+                </div>
+            </div>
+            <br>
+            <input type="button" value="Another Planet" class="my-btn" id="getplanet">   
+        </div>
+
+<!----------     Card Star Wars Species   -------------->
+
+
+        <div class="col-sm-6">
+            <div class="card">
+                <h4 class="card-header">Star Wars Species</h4>
+                <div class="card-body">                    
+                    <p class="card-text mb-1">
+                        <strong>Name</strong>
+                    </p>
+                    <p class="card-text" id="species_name">
+                        Loading...
+                    </p>
+                    <hr>
+                    <p class="card-text mb-1">
+                        <strong>Classification</strong> 
+                    </p>
+                    <p class="card-text" id="species_classification">
+                        Loading...
+                    </p>
+                    <hr>
+                    <p class="card-text mb-1">
+                        <strong>Language</strong>
+                    </p>
+                    <p class="card-text" id="species_language">
+                        Loading...
+                    </p>
+                </div>
+            </div>
+            <br>
+            <input type="button" value="Another Species" class="my-btn " id="getspecies">
+        </div>
+    </div>
+</div>
+
+<!----------     Footer  -------------->
+
+<footer class=" header-footer text-center">
+</footer>
+
+<!----------     Script   -------------->
+
+
+<script src="./src/js/script.js"></script>
+</body>
+</html>
