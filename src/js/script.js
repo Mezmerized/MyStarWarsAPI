@@ -13,6 +13,8 @@ async function getFilms(){
 
 }
 
+/////////////////  function to visualize films loading  ///////////////////
+
 function generateFilmsLoading() {
     film_title.innerHTML            = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     film_director.innerHTML         = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
@@ -37,6 +39,8 @@ async function getPeople(){
     document.getElementById('person_height').textContent = height;
 
 }
+
+/////////////////  function to visualize people loading  ///////////////////
 
 function generatePeopleLoading() {
     person_name.innerHTML           = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
@@ -65,6 +69,8 @@ async function getPlanet(){
 
 }
 
+/////////////////  function to visualize planets loading  ///////////////////
+
 function generatePlanetLoading() {
     planet_name.innerHTML           = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     planet_population.innerHTML     = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
@@ -91,6 +97,8 @@ async function getSpecies(){
     document.getElementById('species_language').textContent = language;
 
 }
+
+/////////////////  function to visualize species loading  ///////////////////
 
 function generateSpeciesLoading() {
     species_name.innerHTML              = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
