@@ -14,9 +14,9 @@ async function getFilms(){
 }
 
 function generateFilmsLoading() {
-    film_title.innerText            = 'Loading...'
-    film_director.innerText         = 'Loading...'
-    film_release_date.innerText     = 'Loading...'
+    film_title.innerHTML            = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
+    film_director.innerHTML         = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
+    film_release_date.innerHTML     = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
 }
 
 getFilms();
@@ -39,9 +39,9 @@ async function getPeople(){
 }
 
 function generatePeopleLoading() {
-    person_name.innerText           = 'Loading...'
-    person_birth_year.innerText     = 'Loading...'
-    person_height.innerText         = 'Loading...'
+    person_name.innerHTML           = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
+    person_birth_year.innerHTML     = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
+    person_height.innerHTML         = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
 }
 
 
@@ -66,9 +66,9 @@ async function getPlanet(){
 }
 
 function generatePlanetLoading() {
-    planet_name.innerText           = 'Loading...'
-    planet_population.innerText     = 'Loading...'
-    planet_climate.innerText        = 'Loading...'
+    planet_name.innerHTML           = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
+    planet_population.innerHTML     = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
+    planet_climate.innerHTML        = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
 }
 
 
@@ -93,9 +93,9 @@ async function getSpecies(){
 }
 
 function generateSpeciesLoading() {
-    species_name.innerText              = 'Loading...'
-    species_classification.innerText    = 'Loading...'
-    species_language.innerText          = 'Loading...'
+    species_name.innerHTML              = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
+    species_classification.innerHTML    = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
+    species_language.innerHTML          = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
 }
 
 
