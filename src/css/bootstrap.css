@@ -85,11 +85,11 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  -webkit-transition: ease-in-out 240ms;
-  -moz-transition: ease-in-out 240ms;
-  -ms-transition: ease-in-out 240ms;
-  -o-transition: ease-in-out 240ms;
-  transition: ease-in-out 240ms;
+  -webkit-transition: ease-in-out 180ms;
+  -moz-transition: ease-in-out 180ms;
+  -ms-transition: ease-in-out 180ms;
+  -o-transition: ease-in-out 180ms;
+  transition: ease-in-out 180ms;
 }
 
 .my-btn:hover {
