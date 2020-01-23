@@ -109,3 +109,5 @@ document.getElementById("getspecies").addEventListener("click", getSpecies);
 //   el.addEventListener('click', getPeople, false);
 // }
 
+// .catch(e => {
+//     generateDataFail()})
