@@ -63,7 +63,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
-  background-image: url(../img/fleet2.jpg);
+  /* background-image: url(../img/fleet2.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
 }
