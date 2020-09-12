@@ -3,7 +3,7 @@
 async function getFilms(){
     generateFilmsLoading()
     let randomFilm = Math.floor((Math.random() * 7) + 1);
-    const response = await fetch('https://swapi.co/api/films/' + randomFilm);
+    const response = await fetch('https://swapi.dev/api/films/' + randomFilm);
     const data = await response.json();
     const { title, director, release_date } = data;
 
@@ -30,7 +30,7 @@ document.getElementById("getfilm").addEventListener("click", getFilms);
 async function getPeople(){
     generatePeopleLoading()
     let randomPerson = Math.floor((Math.random() * 88) + 1);
-    const response = await fetch('https://swapi.co/api/people/' + randomPerson);
+    const response = await fetch('https://swapi.dev/api/people/' + randomPerson);
     const data = await response.json();
     const { name, height, birth_year } = data;
 
@@ -59,7 +59,7 @@ document.getElementById("getperson").addEventListener("click", getPeople);
 async function getPlanet(){
     generatePlanetLoading()
     let randomPlanet = Math.floor((Math.random() * 61) + 1);
-    const response = await fetch('https://swapi.co/api/planets/' + randomPlanet);
+    const response = await fetch('https://swapi.dev/api/planets/' + randomPlanet);
     const data = await response.json();
     const { name, population, climate } = data;
 
@@ -88,7 +88,7 @@ document.getElementById("getplanet").addEventListener("click", getPlanet);
 async function getSpecies(){
     generateSpeciesLoading()
     let randomSpecies = Math.floor((Math.random() * 37) + 1);
-    const response = await fetch('https://swapi.co/api/species/' + randomSpecies);
+    const response = await fetch('https://swapi.dev/api/species/' + randomSpecies);
     const data = await response.json();
     const { name, classification, language } = data;
 
