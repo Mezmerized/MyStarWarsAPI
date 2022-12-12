@@ -71,9 +71,16 @@ body {
 /*************** Custom Styles - Start ************/
 
 .header-footer {
+  position: relative;
   background: linear-gradient(135deg, #000014, #004157);
   color: #fff;
   padding: 25px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .my-btn {
