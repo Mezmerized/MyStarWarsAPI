@@ -110,12 +110,3 @@ function generateSpeciesLoading() {
 getSpecies();
 
 document.getElementById("getspecies").addEventListener("click", getSpecies);
-
-
-// var el = document.getElementById('btn-next');
-// if(el){
-//   el.addEventListener('click', getPeople, false);
-// }
-
-// .catch(e => {
-//     generateDataFail()})
