@@ -33,8 +33,8 @@ async function getFilms(){
 
     let randomFilm = Math.floor((Math.random() * count) + 1);
     const response = await fetch(URL + 'films/' + randomFilm);
+    
     let lastRandomFilm = parseInt(response.url.substring(response.url.lastIndexOf('/') + 1));
-    // sessionStorage.setItem(lastRandomFilm)
 
     const data = await response.json();
     const { title, director, release_date } = data;
@@ -73,9 +73,9 @@ async function getPeople(){
     count = peopleObjectCount[0];
 
     let randomPerson = Math.floor((Math.random() * count) + 1);
-    const response = await fetch(URL + 'people/' + randomPerson);
+    const response = await fetch(URL + 'people/' + randomPerson)
     const data = await response.json();
-    const { name, height, birth_year } = data;
+    const { name, birth_year, height } = data;
 
     if (response.status === 404) {
         document.getElementById('person_name').textContent = `Sorry ... could not load data. Error ${response.status}`;
