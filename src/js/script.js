@@ -1,9 +1,31 @@
-/////////////////  api function to fetch random film info ///////////////////
+// Start up
+
+const URL = 'https://swapi.dev/api/';
+
+getFilms();
+getPeople();
+getPlanet();
+getSpecies();
+
+// Eventlistener buttons
+
+document.getElementById("getfilm").addEventListener("click", getFilms);
+document.getElementById("getperson").addEventListener("click", getPeople);
+document.getElementById("getplanet").addEventListener("click", getPlanet);
+document.getElementById("getspecies").addEventListener("click", getSpecies);
+
+// api function to fetch random film info 
 
 async function getFilms(){
-    generateFilmsLoading()
-    let randomFilm = Math.floor((Math.random() * 6) + 1);
-    const response = await fetch('https://swapi.dev/api/films/' + randomFilm);
+    generateFilmsLoading();
+
+    const getFilmsObject = await fetch(URL + 'films');
+    const filmsData = await getFilmsObject.json();
+    const filmsObjectlength = Object.values(filmsData);
+    length = filmsObjectlength[0];
+
+    let randomFilm = Math.floor((Math.random() * length) + 1);
+    const response = await fetch(URL + 'films/' + randomFilm);
     const data = await response.json();
     const { title, director, release_date } = data;
 
@@ -11,26 +33,28 @@ async function getFilms(){
     document.getElementById('film_director').textContent = director;
     document.getElementById('film_release_date').textContent = release_date;
 
-}
+};
 
-/////////////////  function to visualize films loading  ///////////////////
+// function to visualize films loading  
 
 function generateFilmsLoading() {
     film_title.innerHTML            = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     film_director.innerHTML         = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     film_release_date.innerHTML     = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
-}
+};
 
-getFilms();
-
-document.getElementById("getfilm").addEventListener("click", getFilms);
-
-/////////////////  api function to fetch random person info ///////////////////
+// api function to fetch random person info 
 
 async function getPeople(){
-    generatePeopleLoading()
-    let randomPerson = Math.floor((Math.random() * 82) + 1);
-    const response = await fetch('https://swapi.dev/api/people/' + randomPerson);
+    generatePeopleLoading();
+
+    const getPeopleObject = await fetch(URL + 'people');
+    const peopleData = await getPeopleObject.json();
+    const peopleObjectlength = Object.values(peopleData);
+    length = peopleObjectlength[0];
+
+    let randomPerson = Math.floor((Math.random() * length) + 1);
+    const response = await fetch(URL + 'people/' + randomPerson);
     const data = await response.json();
     const { name, height, birth_year } = data;
 
@@ -38,28 +62,28 @@ async function getPeople(){
     document.getElementById('person_birth_year').textContent = birth_year;
     document.getElementById('person_height').textContent = height;
 
-}
+};
 
-/////////////////  function to visualize people loading  ///////////////////
+// function to visualize people loading  
 
 function generatePeopleLoading() {
     person_name.innerHTML           = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     person_birth_year.innerHTML     = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     person_height.innerHTML         = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
-}
+};
 
-
-getPeople();
-
-document.getElementById("getperson").addEventListener("click", getPeople);
-
-
-/////////////////  api function to fetch random planet info ///////////////////
+// api function to fetch random planet info 
 
 async function getPlanet(){
-    generatePlanetLoading()
+    generatePlanetLoading();
+
+    const getPlanetsObject = await fetch(URL + 'planets');
+    const planetsData = await getPlanetsObject.json();
+    const planetssObjectlength = Object.values(planetsData);
+    length = planetssObjectlength[0];
+
     let randomPlanet = Math.floor((Math.random() * 60) + 1);
-    const response = await fetch('https://swapi.dev/api/planets/' + randomPlanet);
+    const response = await fetch(URL + 'planets/' + randomPlanet);
     const data = await response.json();
     const { name, population, climate } = data;
 
@@ -67,28 +91,28 @@ async function getPlanet(){
     document.getElementById('planet_population').textContent = population;
     document.getElementById('planet_climate').textContent = climate;
 
-}
+};
 
-/////////////////  function to visualize planets loading  ///////////////////
+// function to visualize planets loading  
 
 function generatePlanetLoading() {
     planet_name.innerHTML           = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     planet_population.innerHTML     = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     planet_climate.innerHTML        = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
-}
+};
 
-
-getPlanet();
-
-document.getElementById("getplanet").addEventListener("click", getPlanet);
-
-
-/////////////////  api funtion to fetch random planet info ///////////////////
+// api funtion to fetch random planet info 
 
 async function getSpecies(){
-    generateSpeciesLoading()
+    generateSpeciesLoading();
+
+    const getSpeciesObject = await fetch(URL + 'species');
+    const speciesData = await getSpeciesObject.json();
+    const speciesObjectlength = Object.values(speciesData);
+    length = speciesObjectlength[0];
+
     let randomSpecies = Math.floor((Math.random() * 37) + 1);
-    const response = await fetch('https://swapi.dev/api/species/' + randomSpecies);
+    const response = await fetch(URL + 'species/' + randomSpecies);
     const data = await response.json();
     const { name, classification, language } = data;
 
@@ -96,17 +120,12 @@ async function getSpecies(){
     document.getElementById('species_classification').textContent = classification;
     document.getElementById('species_language').textContent = language;
 
-}
+};
 
-/////////////////  function to visualize species loading  ///////////////////
+// function to visualize species loading  
 
 function generateSpeciesLoading() {
     species_name.innerHTML              = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     species_classification.innerHTML    = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
     species_language.innerHTML          = '<i class="fas fa-circle-notch fa-spin fa-sw"></i>'
-}
-
-
-getSpecies();
-
-document.getElementById("getspecies").addEventListener("click", getSpecies);
+};
